@@ -5,7 +5,7 @@ define(['knockout'],function(ko){
     });
 
     return {
-        displayName: 'What is your name?',
+        displayName: 'What is your name? (dFiddle)',
         name: name,
         activate: function() {
             this.name("Joe");
