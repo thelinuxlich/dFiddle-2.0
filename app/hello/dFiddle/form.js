@@ -1,4 +1,4 @@
-define(['knockout','durandal/app'],function(ko,app){
+define(['knockout'],function(ko){
     var name = ko.observable();
     var canSayHello = ko.computed(function() {
         return name() ? true : false;
@@ -11,7 +11,7 @@ define(['knockout','durandal/app'],function(ko,app){
             this.name("Joe");
         },
         sayHello: function() {
-            app.showMessage('Hello ' + name() + '!', 'Greetings');
+            alert('Hello ' + name() + '!', 'Greetings');
         },
         canSayHello: canSayHello
     };
