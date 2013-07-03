@@ -1,33 +1,9 @@
-﻿define(['durandal/app', 'durandal/system', 'knockout'], function( app, system, ko ) {
-    var name = ko.observable();
-    var canSayHello = ko.computed(function() {
-        return name() ? true : false;
-    });
+﻿define(['app/hello/dFiddle/form','durandal/app', 'durandal/system', 'knockout'], function( Form, app, system, ko ) {
 
     return {
-        displayName: 'What is your name?',
-        name: name,
-        sayHello: function() {
-            app.showMessage('Hello ' + name() + '!', 'Greetings');
-        },
-        canSayHello: canSayHello,
+        form: new Form(),
         activate: function() {
             system.log('Lifecycle : activate');
-        },
-        binding: function() {
-            system.log('Lifecycle : binding');
-        },
-        bindingComplete: function() {
-            system.log('Lifecycle : bindingComplete');
-        },
-        attachedToParent: function( view, parent ) {
-            system.log('Lifecycle : attachedToParent');
-        },
-        compositionComplete: function( view ) {
-            system.log('Lifecycle : compositionComplete');
-        },
-        detachedFromDocument: function( view ) {
-            system.log('Lifecycle : detachedFromDocument'); //Note: This won't be called as long as the composition system is set to cache views.
         }
     };
 });
