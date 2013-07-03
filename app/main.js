@@ -19,7 +19,8 @@
             deps: ['jquery'],
             exports: '$.support.transition' // just picked one
         }
-    }
+    },
+    urlArgs: "bust=" +  (new Date()).getTime()
 });
 
 define(['durandal/system', 'durandal/app', 'durandal/viewLocator'],  function (system, app, viewLocator) {
