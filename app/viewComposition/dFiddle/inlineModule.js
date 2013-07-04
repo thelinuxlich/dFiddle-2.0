@@ -1,4 +1,4 @@
-define(['knockout'],function(){
+define(['knockout'],function(ko){
     return {
         someProperty: ko.observable('This is being bound against an inline view.'),
         activate: function() {
