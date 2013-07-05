@@ -5,7 +5,7 @@ define(['knockout'],function(ko){
             console.log("value changed");
         });
     };
-    InlineModule.prototype.activate = function() {
+    InlineModule.prototype.init = function() {
         this.someProperty("This was changed inside the activate function of the inlined module with cacheViews: true.");
     };
     return InlineModule;
