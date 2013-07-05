@@ -4,9 +4,11 @@ define(['knockout'],function(ko){
         this.someProperty.subscribe(function(){
             console.log("value changed");
         });
+        this.i = 0;
     };
     InlineModule.prototype.init = function() {
-        this.someProperty("This was changed inside the activate function of the inlined module with cacheViews: true.");
+        this.i++;
+        this.someProperty("This was changed inside the activate function of the inlined module with cacheViews: true. init: "+this.i);
     };
     return InlineModule;
 });
